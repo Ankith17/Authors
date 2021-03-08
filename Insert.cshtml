@@ -1,0 +1,19 @@
+﻿@model AssignAuthor.Models.Authors
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+@using (Html.BeginForm())
+{
+    @Html.Label("Author First Name")
+    @Html.EditorFor(x => x.FName)
+    @Html.ValidationMessageFor(x => x.FName);
+    @Html.Label("Author Last Name")
+    @Html.EditorFor(x => x.LName)
+    @Html.ValidationMessageFor(x => x.LName);
+    @Html.Label("Genre")
+    @Html.EditorFor(x => x.Genre)
+    @Html.ValidationMessageFor(x => x.Genre);
+    <input type="submit" name="submit" />
+}

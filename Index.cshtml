@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AssignAuthor.Models.Authors> 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table>
+    <tr>
+        <th>@Html.Label("Author Id")</th>
+        <th>@Html.Label("Author First Name")</th>
+        <th>@Html.Label("Author Last Name")</th>
+        <th>@Html.Label("Genre")</th>
+
+    </tr>
+    @{foreach(var x in Model){
+            <tr><td>@x.AuthorId</td>
+                <td>@x.FName</td>
+                <td>@x.LName</td>
+                <td>@x.Genre</td>
+                </tr>
+
+    } }
+</table>
+
+
